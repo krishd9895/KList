@@ -1,5 +1,5 @@
 {
-  "name": "Alist",
+  "name": "klist",
   "description": "A simple deployment of Alist",
   "repository": "https://github.com/krishd9895/KList.git",
   "stack": "container",
@@ -10,15 +10,18 @@
     },
     "DB_HOST": {
       "description": "Database host address",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "DB_USER": {
       "description": "Database username",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "DB_PASS": {
       "description": "Database password",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "DB_TABLE_PREFIX": {
       "description": "Table prefix for the database",
@@ -38,11 +41,13 @@
     },
     "DB_NAME": {
       "description": "Database name",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "DB_SSL_MODE": {
       "description": "Database SSL mode",
-      "value": ""
+      "value": "",
+      "required": false
     }
   }
 }
