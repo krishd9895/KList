@@ -2,20 +2,6 @@
   "name": "alist",
   "description": "A powerful file manager",
   "repository": "https://github.com/krishd9895/KList.git",
-  "logo": "https://example.com/path/to/logo.png",
-  "keywords": ["file manager", "alist"],
-  "buildpacks": [
-    {
-      "url": "heroku/python"
-    }
-  ],
-  "env": {
-    "DATABASE_URL": {
-      "description": "The URL of the database",
-      "value": "sqlite3:data/data.db"
-    }
-  },
-  "scripts": {
-    "postdeploy": "python manage.py migrate"
-  }
+  "logo": "",
+  "keywords": ["file manager", "alist"]
 }
