@@ -1,6 +1,3 @@
 build:
   docker:
     web: Dockerfile
-
-run:
-  web: alist server --port 5244
