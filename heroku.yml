@@ -1,0 +1,6 @@
+build:
+  docker:
+    web: xhofe/alist:latest
+
+run:
+  web: docker-entrypoint.sh start
