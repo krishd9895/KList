@@ -1,0 +1,28 @@
+{
+  "name": "klist",
+  "description": "A simple deployment of Alist",
+  "repository": "https://github.com/krishd9895/KList",
+  "stack": "container",
+  "env": {
+    "DB_TYPE": {
+      "description": "Type of the database",
+      "value": "sqlite3"
+    },
+    "DB_TABLE_PREFIX": {
+      "description": "Table prefix for the database",
+      "value": "alist_"
+    },
+    "CDN": {
+      "description": "Content Delivery Network",
+      "value": "https://cdn.jsdelivr.net/npm/alist-web@$version/dist"
+    },
+    "DB_PORT": {
+      "description": "Database port",
+      "value": "3306"
+    },
+    "PORT": {
+      "description": "Port the app will run on",
+      "value": "5244"
+    }
+  }
+}
