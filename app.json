@@ -1,12 +1,24 @@
 {
-  "name": "klist",
+  "name": "Alist",
   "description": "A simple deployment of Alist",
-  "repository": "https://github.com/krishd9895/KList",
+  "repository": "https://github.com/krishd9895/KList.git",
   "stack": "container",
   "env": {
     "DB_TYPE": {
       "description": "Type of the database",
       "value": "sqlite3"
+    },
+    "DB_HOST": {
+      "description": "Database host address",
+      "value": ""
+    },
+    "DB_USER": {
+      "description": "Database username",
+      "value": ""
+    },
+    "DB_PASS": {
+      "description": "Database password",
+      "value": ""
     },
     "DB_TABLE_PREFIX": {
       "description": "Table prefix for the database",
@@ -23,6 +35,14 @@
     "PORT": {
       "description": "Port the app will run on",
       "value": "5244"
+    },
+    "DB_NAME": {
+      "description": "Database name",
+      "value": ""
+    },
+    "DB_SSL_MODE": {
+      "description": "Database SSL mode",
+      "value": ""
     }
   }
 }
