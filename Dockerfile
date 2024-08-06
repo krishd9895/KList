@@ -4,16 +4,20 @@ FROM golang:1.20 AS builder
 # Set the Current Working Directory inside the container
 WORKDIR /app
 
-# Copy the local directory contents into the container
-COPY klist /app/klist
-
-# Install any needed packages
+# Install dependencies
 RUN apt-get update && apt-get install -y \
+    wget \
     libsqlite3-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Make the alist binary executable
-RUN chmod +x /app/klist/alist
+# Download and extract the alist binary
+RUN wget https://github.com/alist-org/alist/releases/download/v3.36.0/alist-linux-amd64.tar.gz \
+    && tar -xzf alist-linux-amd64.tar.gz \
+    && mv alist /app/klist/alist \
+    && chmod +x /app/klist/alist
+
+# Copy the local directory contents into the container
+COPY klist/data /app/klist/data
 
 # Set the working directory to where alist is located
 WORKDIR /app/klist
