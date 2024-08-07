@@ -25,5 +25,8 @@ COPY klist/data /app/klist/data
 # Set the working directory to where alist is located
 WORKDIR /app/klist
 
+# Expose port 5244
+EXPOSE 5244
+
 # Run alist server
 CMD ["./alist", "server"]
