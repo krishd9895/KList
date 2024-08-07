@@ -10,6 +10,9 @@ RUN apt-get update && apt-get install -y \
     libsqlite3-dev \
     && rm -rf /var/lib/apt/lists/*
 
+# Create the necessary directories
+RUN mkdir -p /app/klist/data
+
 # Download and extract the alist binary
 RUN wget https://github.com/alist-org/alist/releases/download/v3.36.0/alist-linux-amd64.tar.gz \
     && tar -xzf alist-linux-amd64.tar.gz \
