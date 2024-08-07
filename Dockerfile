@@ -1,5 +1,5 @@
 # Use an official Golang runtime as a parent image
-FROM golang:1.20 AS builder
+FROM golang:bookworm
 
 # Set the Current Working Directory inside the container
 WORKDIR /app
